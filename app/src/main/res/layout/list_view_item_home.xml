@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_list_view_item_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_default"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_icon"
+                android:text="应用名字"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"/>
+
+            <RatingBar
+                android:id="@+id/rb_star"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_below="@id/tv_name"
+                android:layout_toRightOf="@id/iv_icon"
+                android:isIndicator="true"
+                android:paddingTop="2dp"
+                android:progressDrawable="@drawable/selector_rating_bar"
+                android:rating="4"/>
+
+            <TextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rb_star"
+                android:layout_toRightOf="@id/iv_icon"
+                android:text="4.08MB"
+                android:textColor="#9000"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_download"/>
+                <TextView
+                    android:paddingTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载"
+                    android:textColor="@color/colorText"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#6000"/>
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rb_star"
+            android:layout_toRightOf="@id/iv_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="这是一个应用这是一个应用这是一个应用这是一个应用这是一个应用这是一个应用"
+            android:textColor="#9000"
+            android:padding="5dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>
